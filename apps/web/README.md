@@ -1,17 +1,17 @@
-# <img src="https://github.com/user-attachments/assets/b8249113-d515-4c91-a12a-f134813614e8" height="60" valign="middle" alt="Safe{Wallet}" style="background: #fff; padding: 20px; margin: 0 -20px" />
+# <img src="https://github.com/user-attachments/assets/b8249113-d515-4c91-a12a-f134813614e8" height="60" valign="middle" alt="Gravity Safe" style="background: #fff; padding: 20px; margin: 0 -20px" />
 
 [![License](https://img.shields.io/github/license/safe-global/safe-wallet-web)](https://github.com/safe-global/safe-wallet-web/blob/main/LICENSE)
 ![Tests](https://img.shields.io/github/actions/workflow/status/safe-global/safe-wallet-web/test.yml?branch=main&label=tests)
 ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/safe-global/safe-wallet-web)
 [![GitPOAP Badge](https://public-api.gitpoap.io/v1/repo/safe-global/safe-wallet-web/badge)](https://www.gitpoap.io/gh/safe-global/safe-wallet-web)
 
-# Safe{Wallet} web app
+# Gravity Safe web app
 
 This project is now part of the **@safe-global/safe-wallet** monorepo! The monorepo setup allows centralized management
 of multiple
-applications and shared libraries. This workspace (`apps/web`) is the frontend of the Safe{Wallet} web app.
+applications and shared libraries. This workspace (`apps/web`) is the frontend of the Gravity Safe web app.
 
-Safe{Wallet} is a smart contract wallet for Ethereum and other EVM chains. Based on Gnosis Safe multisig contracts.
+Gravity Safe is a smart contract wallet for Ethereum and other EVM chains. Based on Gravity Safe multisig contracts.
 
 You can run commands for this workspace in two ways:
 

@@ -9,7 +9,11 @@ import packageJson from '../../../../package.json'
 import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
 import { useIsOfficialHost } from '@/hooks/useIsOfficialHost'
-import { HELP_CENTER_URL } from '@safe-global/utils/config/constants'
+import { DISCORD_URL, HELP_CENTER_PROTOFIRE_URL, TWITTER_URL } from '@safe-global/utils/config/constants'
+import darkPalette from '@/components/theme/darkPalette'
+import ProtofireLogo from '@/public/images/protofire-logo.svg'
+import DiscordIcon from '@/public/images/common/discord-icon.svg'
+import TwitterIcon from '@mui/icons-material/X'
 
 const footerPages = [
   AppRoutes.welcome.index,
@@ -48,13 +52,23 @@ const Footer = (): ReactElement | null => {
       <ul>
         {isOfficialHost ? (
           <>
-            <li>
+            {/* <li>
               <Typography variant="caption">&copy;2022–{new Date().getFullYear()} Core Contributors GmbH</Typography>
+            </li> */}
+            <li>
+              <ExternalLink href={DISCORD_URL} noIcon sx={{ svg: { mr: 0.5 } }}>
+                <SvgIcon component={DiscordIcon} inheritViewBox fontSize="inherit" />
+              </ExternalLink>
+            </li>
+            <li>
+              <ExternalLink href={TWITTER_URL} noIcon sx={{ svg: { mr: 0.5 } }}>
+                <SvgIcon component={TwitterIcon} inheritViewBox fontSize="inherit" />
+              </ExternalLink>
             </li>
             <li>
               <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
             </li>
-            <li>
+            {/* <li>
               <FooterLink href={getHref(AppRoutes.privacy)}>Privacy</FooterLink>
             </li>
             <li>
@@ -62,17 +76,34 @@ const Footer = (): ReactElement | null => {
             </li>
             <li>
               <FooterLink href={getHref(AppRoutes.imprint)}>Imprint</FooterLink>
-            </li>
+            </li> */}
             <li>
               <FooterLink href={getHref(AppRoutes.cookie)}>Cookie policy</FooterLink>
             </li>
-            <li>
+            {/* <li>
               <FooterLink href={getHref(AppRoutes.settings.index)}>Preferences</FooterLink>
-            </li>
+            </li> */}
             <li>
-              <ExternalLink href={HELP_CENTER_URL} noIcon sx={{ span: { textDecoration: 'underline' } }}>
+              <ExternalLink href={HELP_CENTER_PROTOFIRE_URL} noIcon sx={{ span: { textDecoration: 'underline' } }}>
                 Help
               </ExternalLink>
+            </li>
+            <li>
+              <Typography variant="caption">
+                Supported by{' '}
+                <SvgIcon
+                  component={ProtofireLogo}
+                  inheritViewBox
+                  fontSize="small"
+                  sx={{ verticalAlign: 'middle', mx: 0.5 }}
+                />
+                <MUILink
+                  href="https://protofire.io/services/solution/safe-deployment"
+                  sx={{ color: darkPalette.primary.main, textDecoration: 'none' }}
+                >
+                  Protofire
+                </MUILink>
+              </Typography>
             </li>
           </>
         ) : (

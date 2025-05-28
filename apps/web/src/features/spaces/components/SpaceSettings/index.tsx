@@ -10,8 +10,6 @@ import DeleteSpaceDialog from '@/features/spaces/components/SpaceSettings/Delete
 import UpdateSpaceForm from '@/features/spaces/components/SpaceSettings/UpdateSpaceForm'
 import { trackEvent } from '@/services/analytics'
 import { SPACE_EVENTS, SPACE_LABELS } from '@/services/analytics/events/spaces'
-import ExternalLink from '@/components/common/ExternalLink'
-import { AppRoutes } from '@/config/routes'
 
 const SpaceSettings = () => {
   const [deleteSpaceOpen, setDeleteSpaceOpen] = useState(false)
@@ -35,7 +33,7 @@ const SpaceSettings = () => {
           <Grid2 size={{ xs: 12, md: 8 }}>
             <Typography mb={2}>
               The space name is visible in the sidebar menu, headings to all its members. Usually it&apos;s a name of
-              the company or a business. <ExternalLink href={AppRoutes.privacy}>How is this data stored?</ExternalLink>
+              the company or a business.
             </Typography>
 
             <UpdateSpaceForm space={space} />

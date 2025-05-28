@@ -5,15 +5,16 @@ export const IS_PRODUCTION = process.env.NEXT_PUBLIC_IS_PRODUCTION === 'true'
 export const IS_DEV = process.env.NODE_ENV === 'development'
 
 // default chain ID's as provided to the environment
-export const DEFAULT_TESTNET_CHAIN_ID = +(process.env.NEXT_PUBLIC_DEFAULT_TESTNET_CHAIN_ID ?? chains.sep)
-export const DEFAULT_MAINNET_CHAIN_ID = +(process.env.NEXT_PUBLIC_DEFAULT_MAINNET_CHAIN_ID ?? chains.eth)
+export const DEFAULT_TESTNET_CHAIN_ID = +(process.env.NEXT_PUBLIC_DEFAULT_TESTNET_CHAIN_ID ?? chains.gravitysep)
+export const DEFAULT_MAINNET_CHAIN_ID = +(process.env.NEXT_PUBLIC_DEFAULT_MAINNET_CHAIN_ID ?? chains.gravity)
 
 // default chain ID used in the application
-export const DEFAULT_CHAIN_ID = IS_PRODUCTION ? DEFAULT_MAINNET_CHAIN_ID : DEFAULT_TESTNET_CHAIN_ID
+export const DEFAULT_CHAIN_ID = DEFAULT_MAINNET_CHAIN_ID
 
 export const GATEWAY_URL_PRODUCTION =
-  process.env.NEXT_PUBLIC_GATEWAY_URL_PRODUCTION || 'https://safe-client.safe.global'
-export const GATEWAY_URL_STAGING = process.env.NEXT_PUBLIC_GATEWAY_URL_STAGING || 'https://safe-client.staging.5afe.dev'
+  process.env.NEXT_PUBLIC_GATEWAY_URL_PRODUCTION || 'https://gateway.gravity-safe.protofire.io'
+export const GATEWAY_URL_STAGING =
+  process.env.NEXT_PUBLIC_GATEWAY_URL_STAGING || 'https://gateway.staging.gravity-safe.protofire.io'
 
 // Magic numbers
 export const POLLING_INTERVAL = 15_000
@@ -70,10 +71,10 @@ export const RECOVERY_FEEDBACK_FORM =
   'https://noteforms.com/forms/safe-feedback-form-hk16ds?notionforms=1&utm_source=notionforms'
 
 // Legal
-export const IS_OFFICIAL_HOST = process.env.NEXT_PUBLIC_IS_OFFICIAL_HOST === 'true'
+export const IS_OFFICIAL_HOST = true
 export const OFFICIAL_HOSTS = /app\.safe\.global|.+\.5afe\.dev|localhost:3000/
 export const IPFS_HOSTS = /\.ipfs\.dweb\.link|\.ipfs\.w3s\.link|\.ipfs\.inbrowser\.link/
-export const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME || (IS_OFFICIAL_HOST ? 'Safe{Wallet}' : 'Wallet fork')
+export const BRAND_NAME = process.env.NEXT_PUBLIC_BRAND_NAME || (IS_OFFICIAL_HOST ? 'Gravity Safe' : 'Wallet fork')
 export const BRAND_LOGO = process.env.NEXT_PUBLIC_BRAND_LOGO || ''
 
 export const REDEFINE_ARTICLE = 'https://safe.mirror.xyz/rInLWZwD_sf7enjoFerj6FIzCYmVMGrrV8Nhg4THdwI'
@@ -84,3 +85,10 @@ export const SAFE_PASS_URL = 'community.safe.global'
 export const ECOSYSTEM_ID_ADDRESS =
   process.env.NEXT_PUBLIC_ECOSYSTEM_ID_ADDRESS || '0x0000000000000000000000000000000000000000'
 export const MULTICHAIN_HELP_ARTICLE = `${HELP_CENTER_URL}/en/articles/222612-multi-chain-safe`
+
+export const TERMS_LINK =
+  process.env.NEXT_PUBLIC_TERMS_LINK ||
+  'https://raw.githubusercontent.com/protofire/safe-legal/refs/heads/main/terms.md'
+export const COOKIE_LINK =
+  process.env.NEXT_PUBLIC_COOKIE_LINK ||
+  'https://raw.githubusercontent.com/protofire/safe-legal/refs/heads/main/cookie.md'

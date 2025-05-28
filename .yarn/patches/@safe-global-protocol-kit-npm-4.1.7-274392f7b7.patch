@@ -1,0 +1,12 @@
+diff --git a/dist/src/utils/eip-3770/config.js b/dist/src/utils/eip-3770/config.js
+index 0a7a36bb93eda7a8c5f67e823cf4c76b8f7e2d0d..34c464467df4200d81fd94b32b32a00105a6c611 100644
+--- a/dist/src/utils/eip-3770/config.js
++++ b/dist/src/utils/eip-3770/config.js
+@@ -243,6 +243,7 @@ exports.networks = [
+     { chainId: 13337n, shortName: 'beam-testnet' },
+     { chainId: 13371n, shortName: 'imx' },
+     { chainId: 13473n, shortName: 'imx-testnet' },
++    { chainId: 13505n, shortName: 'gravitysep' },
+     { chainId: 13746n, shortName: 'g7t' },
+     { chainId: 14800n, shortName: 'vana-moksha' },
+     { chainId: 17000n, shortName: 'holesky' },

@@ -342,7 +342,7 @@ describe('AppsPage', () => {
       await userEvent.type(appURLInput, APP_URL)
 
       const riskCheckbox = await screen.findByText(
-        /This Safe App is not part of Safe{Wallet} and I agree to use it at my own risk\./,
+        /This Safe App is not part of Gravity Safe and I agree to use it at my own risk\./,
       )
 
       await userEvent.click(riskCheckbox)

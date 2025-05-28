@@ -117,7 +117,7 @@ What do some of the capitalized terms mean in this policy?
    7. “Public Key” is a unique sequence of numbers and letters within the Blockchain to distinguish the network participants from each other.
    8. “Private Key” is a unique sequence of numbers and/or letters required to initiate a Blockchain Transaction and should only be known by the legal owner of the Wallet.
    9. “Safe Account” is a modular, self-custodial (i.e. not supervised by us) smart contract-based Wallet. Safe Accounts are [open-source](https://github.com/safe-global/safe-contracts/) released under LGPL-3.0.
-   10. “Safe Interfaces” refers to Safe{Wallet} a web-based graphical user interface for Safe Accounts as well as a mobile application on Android and iOS.
+   10. “Safe Interfaces” refers to Gravity Safe a web-based graphical user interface for Safe Accounts as well as a mobile application on Android and iOS.
    11. “Safe Account Transaction” is a Transaction of a Safe Account, authorized by a user, typically via their Wallet.
    12. “Profile” means the Public Key and user provided, human readable label stored locally on the user's device.
 
@@ -408,11 +408,11 @@ We use [Datadog](https://www.datadoghq.com/) to store log data as described in s
 
 ## 4.4 Mobile app stores {#4.4-mobile-app-stores}
 
-Safe{Wallet} mobile apps are distributed via [Apple AppStore](https://www.apple.com/app-store/) and [Google Play Store](https://play.google.com/). They most likely track user behavior when downloading apps from their stores as well as when using apps. We only have very limited access to that data. We can view aggregated statistics on installs and uninstalls. Grouping by device type, app version, language, carrier and country is possible.
+Gravity Safe mobile apps are distributed via [Apple AppStore](https://www.apple.com/app-store/) and [Google Play Store](https://play.google.com/). They most likely track user behavior when downloading apps from their stores as well as when using apps. We only have very limited access to that data. We can view aggregated statistics on installs and uninstalls. Grouping by device type, app version, language, carrier and country is possible.
 
 ## 4.5 Fingerprint/Touch ID/ Face ID {#4.5-fingerprint/touch-id/-face-id}
 
-We enable the user to unlock the Safe{Wallet} mobile app via biometrics information (touch ID or face ID). This is a feature of the operating system. We do not store any of this data. Instead, the API of the operating system is used to validate the user input. If you have any further questions you should consult with your preferred mobile device provider or manufacturer.
+We enable the user to unlock the Gravity Safe mobile app via biometrics information (touch ID or face ID). This is a feature of the operating system. We do not store any of this data. Instead, the API of the operating system is used to validate the user input. If you have any further questions you should consult with your preferred mobile device provider or manufacturer.
 
 ## 4.6 Google Firebase {#4.6-google-firebase}
 
@@ -462,7 +462,7 @@ We use MoonPay to offer on-ramp and off-ramp services. For that purpose personal
 
 ## 4.13 Spindl {#4.13-spindl}
 
-We use [Spindl](https://www.spindl.xyz/), a measurement and attribution solution for web3 that assists us in comprehending how users interact with different decentralized applications and our app and to enhance your experience with Safe{Wallet}. For enhanced privacy, data is stored for a period of 7 days after which it is securely deleted.
+We use [Spindl](https://www.spindl.xyz/), a measurement and attribution solution for web3 that assists us in comprehending how users interact with different decentralized applications and our app and to enhance your experience with Gravity Safe. For enhanced privacy, data is stored for a period of 7 days after which it is securely deleted.
 
 ## 4.14 Fingerprint
 

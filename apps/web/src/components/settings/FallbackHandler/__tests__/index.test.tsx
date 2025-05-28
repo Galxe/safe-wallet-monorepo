@@ -133,7 +133,7 @@ describe('FallbackHandler', () => {
       await waitFor(() => {
         expect(
           fbHandler.queryByText(
-            new RegExp('The Safe{Wallet} may not work correctly as no fallback handler is currently set.'),
+            new RegExp('The Gravity Safe may not work correctly as no fallback handler is currently set.'),
           ),
         ).toBeInTheDocument()
         expect(fbHandler.queryByText('Transaction Builder')).toBeInTheDocument()
@@ -158,7 +158,7 @@ describe('FallbackHandler', () => {
       await waitFor(() => {
         expect(
           fbHandler.queryByText(
-            new RegExp('The Safe{Wallet} may not work correctly as no fallback handler is currently set.'),
+            new RegExp('The Gravity Safe may not work correctly as no fallback handler is currently set.'),
           ),
         ).toBeInTheDocument()
         expect(fbHandler.queryByText('Transaction Builder')).not.toBeInTheDocument()

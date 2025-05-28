@@ -3,7 +3,7 @@ const IS_DEV = process.env.APP_VARIANT === 'development'
 
 export default {
   expo: {
-    name: IS_DEV ? 'Safe{Wallet} MVP - Development' : 'Safe{Wallet} MVP',
+    name: IS_DEV ? 'Gravity Safe MVP - Development' : 'Gravity Safe MVP',
     slug: 'safe-mobileapp',
     owner: 'safeglobal',
     version: '1.0.0',
@@ -91,7 +91,7 @@ export default {
       [
         'react-native-vision-camera',
         {
-          cameraPermissionText: 'Safe{Wallet} needs access to your Camera to scan QR Codes.',
+          cameraPermissionText: 'Gravity Safe needs access to your Camera to scan QR Codes.',
           enableCodeScanner: true,
           enableLocation: false,
         },

@@ -20,7 +20,9 @@
     "@safe-global/api-kit/ethers": "6.13.4",
     "@gnosis.pm/zodiac/ethers": "6.13.4",
     "@cowprotocol/events": "1.3.0",
-    "@ethersproject/signing-key/elliptic": "^6.6.1"
+    "@ethersproject/signing-key/elliptic": "^6.6.1",
+    "@safe-global/protocol-kit@npm:^5.1.1": "patch:@safe-global/protocol-kit@npm%3A4.1.7#~/.yarn/patches/@safe-global-protocol-kit-npm-4.1.7-274392f7b7.patch",
+    "@safe-global/safe-deployments@npm:^1.37.31": "patch:@safe-global/safe-deployments@npm%3A1.37.32#~/.yarn/patches/@safe-global-safe-deployments-npm-1.37.32-72fb2881f9.patch"
   },
   "devDependencies": {
     "husky": "^9.1.6",
@@ -36,5 +38,8 @@
       "built": true
     }
   },
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.6.0",
+  "dependencies": {
+    "react-markdown": "9.0.1"
+  }
 }

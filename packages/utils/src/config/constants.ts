@@ -21,6 +21,8 @@ export const TENDERLY_ORG_NAME =
   process.env.NEXT_PUBLIC_TENDERLY_ORG_NAME || process.env.EXPO_PUBLIC_TENDERLY_ORG_NAME || ''
 
 // Help Center
+export const NEW_SUGGESTION_FORM = 'https://safe-feature-request.protofire.io'
+export const HELP_CENTER_PROTOFIRE_URL = 'https://safe-support.protofire.io'
 export const HELP_CENTER_URL = 'https://help.safe.global'
 export const HelpCenterArticle = {
   ADDRESS_BOOK_DATA: `${HELP_CENTER_URL}/en/articles/40811-address-book-export-and-import`,
@@ -47,5 +49,5 @@ export const HelperCenterArticleTitles = {
   RECOVERY: 'Learn more about the Account recovery process',
 }
 // Social
-export const DISCORD_URL = 'https://chat.safe.global'
-export const TWITTER_URL = 'https://twitter.com/safe'
+export const DISCORD_URL = 'https://discord.com/invite/galxe'
+export const TWITTER_URL = 'https://x.com/Galxe'

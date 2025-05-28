@@ -1,4 +1,4 @@
-# Safe{Wallet} mobile app 📱
+# Gravity Safe mobile app 📱
 
 This project is now part of the **@safe-global/safe-wallet** monorepo! The monorepo setup allows centralized management
 of multiple

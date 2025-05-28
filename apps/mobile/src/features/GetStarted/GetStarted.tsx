@@ -76,12 +76,7 @@ export const GetStarted = () => {
           <StyledText>By continuing, you agree to our </StyledText>
           <Link href={'https://app.safe.global/terms'} target={'_blank'} asChild>
             <StyledText textDecorationLine={'underline'}>User Terms</StyledText>
-          </Link>
-          <StyledText> and </StyledText>
-          <Link href={'https://app.safe.global/privacy'} target={'_blank'} asChild>
-            <StyledText textDecorationLine={'underline'}>Privacy Policy</StyledText>
-          </Link>
-          <StyledText>.</StyledText>
+          </Link><StyledText>.</StyledText>
         </View>
       </YStack>
     </YStack>
