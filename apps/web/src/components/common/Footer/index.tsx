@@ -8,7 +8,6 @@ import { AppRoutes } from '@/config/routes'
 import packageJson from '../../../../package.json'
 import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
-import { useIsOfficialHost } from '@/hooks/useIsOfficialHost'
 import { DISCORD_URL, HELP_CENTER_PROTOFIRE_URL, TWITTER_URL } from '@safe-global/utils/config/constants'
 import darkPalette from '@/components/theme/darkPalette'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
@@ -37,7 +36,6 @@ const FooterLink = ({ children, href }: { children: ReactNode; href: string }): 
 
 const Footer = (): ReactElement | null => {
   const router = useRouter()
-  const isOfficialHost = useIsOfficialHost()
 
   if (!footerPages.some((path) => router.pathname.startsWith(path))) {
     return null
@@ -50,7 +48,7 @@ const Footer = (): ReactElement | null => {
   return (
     <footer className={css.container}>
       <ul>
-        {isOfficialHost ? (
+        {true ? (
           <>
             {/* <li>
               <Typography variant="caption">&copy;2022–{new Date().getFullYear()} Core Contributors GmbH</Typography>
