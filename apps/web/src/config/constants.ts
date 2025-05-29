@@ -26,7 +26,7 @@ export const BEAMER_ID = process.env.NEXT_PUBLIC_BEAMER_ID || ''
 export const DATADOG_CLIENT_TOKEN = process.env.NEXT_PUBLIC_DATADOG_CLIENT_TOKEN || ''
 
 // Wallets
-export const WC_PROJECT_ID = process.env.NEXT_PUBLIC_WC_PROJECT_ID || ''
+export const WC_PROJECT_ID = process.env.NEXT_PUBLIC_WC_PROJECT_ID || '1704a66acf475676b684e5d14dbd753f2'
 export const TREZOR_APP_URL = 'app.safe.global'
 export const TREZOR_EMAIL = 'support@safe.global'
 

@@ -10,9 +10,8 @@ import HelpCenterIcon from '@/public/images/sidebar/help-center.svg'
 import { Link, ListItem, SvgIcon, Typography } from '@mui/material'
 import DebugToggle from '../DebugToggle'
 import { IS_PRODUCTION } from '@/config/constants'
-import { HELP_CENTER_PROTOFIRE_URL, NEW_SUGGESTION_FORM } from '@safe-global/utils/config/constants'
+import { HELP_CENTER_PROTOFIRE_URL } from '@safe-global/utils/config/constants'
 import darkPalette from '@/components/theme/darkPalette'
-import SuggestionIcon from '@/public/images/sidebar/lightbulb_icon.svg'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
 
 const SidebarFooter = (): ReactElement => {
@@ -52,17 +51,6 @@ const SidebarFooter = (): ReactElement => {
             <SidebarListItemText data-testid="list-item-need-help" bold>
               Need help?
             </SidebarListItemText>
-          </SidebarListItemButton>
-        </a>
-      </ListItem>
-
-      <ListItem disablePadding>
-        <a target="_blank" rel="noopener noreferrer" href={NEW_SUGGESTION_FORM} style={{ width: '100%' }}>
-          <SidebarListItemButton style={{ backgroundColor: '#12FF80', color: 'black' }}>
-            <SidebarListItemIcon color="primary">
-              <SuggestionIcon />
-            </SidebarListItemIcon>
-            <SidebarListItemText bold>New Features Suggestion?</SidebarListItemText>
           </SidebarListItemButton>
         </a>
       </ListItem>
