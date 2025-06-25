@@ -5,7 +5,7 @@ import NetworkError from '@/public/images/apps/network-error.svg'
 
 import css from './styles.module.css'
 import ExternalLink from '@/components/common/ExternalLink'
-import { DISCORD_URL } from '@safe-global/utils/config/constants'
+import { HELP_CENTER_PROTOFIRE_URL } from '@safe-global/utils/config/constants'
 
 type SafeAppsLoadErrorProps = {
   onBackToApps: () => void
@@ -20,9 +20,9 @@ const SafeAppsLoadError = ({ onBackToApps }: SafeAppsLoadErrorProps): React.Reac
         <SvgIcon component={NetworkError} inheritViewBox className={css.image} />
 
         <div>
-          <Typography component="span">In case the problem persists, please reach out to us via </Typography>
-          <ExternalLink href={DISCORD_URL} fontSize="medium">
-            Discord
+          <Typography component="span">In case if problem persists, please report it through our</Typography>
+          <ExternalLink href={HELP_CENTER_PROTOFIRE_URL} fontSize="medium">
+            Form
           </ExternalLink>
         </div>
 

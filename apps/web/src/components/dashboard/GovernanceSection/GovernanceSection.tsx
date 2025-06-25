@@ -21,7 +21,7 @@ import { fetchSafeAppFromManifest } from '@/services/safe-apps/manifest'
 import useAsync from '@safe-global/utils/hooks/useAsync'
 import { getOrigin } from '@/components/safe-apps/utils'
 import InfiniteScroll from '@/components/common/InfiniteScroll'
-import { DISCORD_URL } from '@safe-global/utils/config/constants'
+import { HELP_CENTER_PROTOFIRE_URL } from '@safe-global/utils/config/constants'
 
 // A fallback component when the Safe App fails to load
 const WidgetLoadErrorFallback = () => (
@@ -51,15 +51,15 @@ const WidgetLoadErrorFallback = () => (
             color: 'text.primary',
           }}
         >
-          You can try to reload the page and in case the problem persists, please reach out to us via{' '}
+          In case if problem persists, please report it through our{' '}
           <Link
             target="_blank"
-            href={DISCORD_URL}
+            href={HELP_CENTER_PROTOFIRE_URL}
             sx={{
               fontSize: 'medium',
             }}
           >
-            Discord
+            Form
             <OpenInNew fontSize="small" color="primary" className={css.loadErroricon} />
           </Link>
         </Typography>
