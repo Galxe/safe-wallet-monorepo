@@ -20,7 +20,7 @@ const SafeAppsLoadError = ({ onBackToApps }: SafeAppsLoadErrorProps): React.Reac
         <SvgIcon component={NetworkError} inheritViewBox className={css.image} />
 
         <div>
-          <Typography component="span">In case if problem persists, please report it through our{' '}</Typography>
+          <Typography component="span">In case if problem persists, please report it through our</Typography>{' '}
           <ExternalLink href={HELP_CENTER_PROTOFIRE_URL} fontSize="medium">
             Form
           </ExternalLink>
