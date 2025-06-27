@@ -3,7 +3,7 @@ import { ContentSecurityPolicy, StrictTransportSecurity } from '@/config/securit
 import lightPalette from '@/components/theme/lightPalette'
 import darkPalette from '@/components/theme/darkPalette'
 
-const descriptionText = `${BRAND_NAME} is the most trusted smart account wallet on Ethereum with over $100B secured.`
+const descriptionText = `${BRAND_NAME} is the most trusted smart account wallet on Gravity.`
 const titleText = BRAND_NAME
 
 const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
@@ -12,14 +12,14 @@ const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
     {!IS_PRODUCTION && <meta name="robots" content="noindex" />}
 
     {/* Social sharing */}
-    <meta name="og:image" content="https://app.safe.global/images/social-share.png" />
+    <meta name="og:image" content="https://safe.gravity.xyz/images/social-share.png" />
     <meta name="og:description" content={descriptionText} />
     <meta name="og:title" content={titleText} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@safe" />
+    <meta name="twitter:site" content="@GravityChain" />
     <meta name="twitter:title" content={titleText} />
     <meta name="twitter:description" content={descriptionText} />
-    <meta name="twitter:image" content="https://app.safe.global/images/social-share.png" />
+    <meta name="twitter:image" content="https://safe.gravity.xyz/images/social-share.png" />
 
     {/* CSP */}
     <meta httpEquiv="Content-Security-Policy" content={ContentSecurityPolicy} />
