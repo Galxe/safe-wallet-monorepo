@@ -8363,6 +8363,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@peculiar/asn1-schema@npm:^2.3.13":
+  version: 2.4.0
+  resolution: "@peculiar/asn1-schema@npm:2.4.0"
+  dependencies:
+    asn1js: "npm:^3.0.6"
+    pvtsutils: "npm:^1.3.6"
+    tslib: "npm:^2.8.1"
+  checksum: 10/026d586282e480d6cb69edd94f1e0a5dd59e696fe13ca469dc4afc9f1e6d6ec85ec2affdf02a402c694e2f27fb5e3422c9ac64a6bcc68fcb21835565fb7838a9
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -9528,15 +9539,6 @@ __metadata:
   dependencies:
     semver: "npm:^7.6.2"
   checksum: 10/312e838e9e4555f7e74073774fa9df1f8421163cb65f2f129d616e1c53015df4869904cee018acb38f882d34ffec24170323bfb42111da1b1660d041f1bfaf91
-  languageName: node
-  linkType: hard
-
-"@safe-global/safe-deployments@patch:@safe-global/safe-deployments@npm%3A1.37.32#~/.yarn/patches/@safe-global-safe-deployments-npm-1.37.32-72fb2881f9.patch":
-  version: 1.37.32
-  resolution: "@safe-global/safe-deployments@patch:@safe-global/safe-deployments@npm%3A1.37.32#~/.yarn/patches/@safe-global-safe-deployments-npm-1.37.32-72fb2881f9.patch::version=1.37.32&hash=b0e47f"
-  dependencies:
-    semver: "npm:^7.6.2"
-  checksum: 10/81c1677e8ffa9175a51b4b20c427930bdb7fc35647bf4ed21283761f405aa3dd39c5c4f816a0b202933e197f051ca3fefde60ff5a9642e260b6efe6243f7879d
   languageName: node
   linkType: hard
 
@@ -15573,6 +15575,17 @@ __metadata:
   dependencies:
     safer-buffer: "npm:~2.1.0"
   checksum: 10/cf629291fee6c1a6f530549939433ebf32200d7849f38b810ff26ee74235e845c0c12b2ed0f1607ac17383d19b219b69cefa009b920dab57924c5c544e495078
+  languageName: node
+  linkType: hard
+
+"asn1js@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "asn1js@npm:3.0.6"
+  dependencies:
+    pvtsutils: "npm:^1.3.6"
+    pvutils: "npm:^1.1.3"
+    tslib: "npm:^2.8.1"
+  checksum: 10/2b283dd87662b3276ccc3e68db041c1062f629d9454b24fc2c141ad07c400ae50e02ee78f8c8a67043aa7d430e949d4616b8921178243932167bc2c9e861b972
   languageName: node
   linkType: hard
 
@@ -29353,6 +29366,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pvtsutils@npm:^1.3.6":
+  version: 1.3.6
+  resolution: "pvtsutils@npm:1.3.6"
+  dependencies:
+    tslib: "npm:^2.8.1"
+  checksum: 10/d45b12f8526e13ecf15fe09b30cde65501f3300fd2a07c11b28a966d434d1f767c8a61597ecba2e19c7eb19ca0c740341a6babc67a4f741e08b1ef1095c71663
+  languageName: node
+  linkType: hard
+
+"pvutils@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "pvutils@npm:1.1.3"
+  checksum: 10/e5201b8f78ece68eae414a938c844bc45fb3f0de298178eed1775a217eedfd897c4346e5e54f410bb4d7466e09ceb262e85f20fd64239b8bb2595f14c52fa95e
+  languageName: node
+  linkType: hard
+
 "qrcode-terminal@npm:0.11.0":
   version: 0.11.0
   resolution: "qrcode-terminal@npm:0.11.0"
@@ -29678,6 +29707,27 @@ __metadata:
   version: 19.0.0
   resolution: "react-is@npm:19.0.0"
   checksum: 10/6cd3695c462ec3f0d4db98583f0c1b9a439248d60214f6c42c2b0e2951a1066339d0eefa74707f03484042e043fca87750282a35b652492c035f5f3da0d6498a
+  languageName: node
+  linkType: hard
+
+"react-markdown@npm:9.0.1":
+  version: 9.0.1
+  resolution: "react-markdown@npm:9.0.1"
+  dependencies:
+    "@types/hast": "npm:^3.0.0"
+    devlop: "npm:^1.0.0"
+    hast-util-to-jsx-runtime: "npm:^2.0.0"
+    html-url-attributes: "npm:^3.0.0"
+    mdast-util-to-hast: "npm:^13.0.0"
+    remark-parse: "npm:^11.0.0"
+    remark-rehype: "npm:^11.0.0"
+    unified: "npm:^11.0.0"
+    unist-util-visit: "npm:^5.0.0"
+    vfile: "npm:^6.0.0"
+  peerDependencies:
+    "@types/react": ">=18"
+    react: ">=18"
+  checksum: 10/71ce31f200982f641d363888a26e8fb52a199a589124f20295e9be870fa3aed26fcfa14d1dc766d83df666a15cb82359291bfda207bd55d5728ff376d217e079
   languageName: node
   linkType: hard
 
@@ -33802,7 +33852,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2, tslib@npm:2.8.1, tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.6.2, tslib@npm:^2.7.0, tslib@npm:^2.8.0":
+"tslib@npm:2, tslib@npm:2.8.1, tslib@npm:^2.0.0, tslib@npm:^2.0.1, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.6.2, tslib@npm:^2.7.0, tslib@npm:^2.8.0, tslib@npm:^2.8.1":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10/3e2e043d5c2316461cb54e5c7fe02c30ef6dccb3384717ca22ae5c6b5bc95232a6241df19c622d9c73b809bea33b187f6dbc73030963e29950c2141bc32a79f7
