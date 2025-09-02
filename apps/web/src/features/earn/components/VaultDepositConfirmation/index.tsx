@@ -6,12 +6,13 @@ import { vaultTypeToLabel } from '@/features/earn/utils'
 import { formatPercentage } from '@safe-global/utils/utils/formatters'
 import { DataTable } from '@/components/common/Table/DataTable'
 import { DataRow } from '@/components/common/Table/DataRow'
-import ExternalLink from '@/components/common/ExternalLink'
 import IframeIcon from '@/components/common/IframeIcon'
 import { InfoTooltip } from '@/features/stake/components/InfoTooltip'
 import { BRAND_NAME } from '@/config/constants'
 
 const AdditionalRewards = ({ txInfo }: { txInfo: VaultDepositTransactionInfo }) => {
+  if (!txInfo.additionalRewards[0]) return null
+
   return (
     <Stack sx={{ border: '1px solid #ddd', borderRadius: '6px', padding: '12px', mt: 1 }}>
       <DataTable
@@ -24,8 +25,12 @@ const AdditionalRewards = ({ txInfo }: { txInfo: VaultDepositTransactionInfo }) 
             </Typography>
           </DataRow>,
 
-          <DataRow key="Reward rate" title="Reward rate">
+          <DataRow key="Earn" title="Earn">
             {formatPercentage(txInfo.additionalRewardsNrr / 100)}
+          </DataRow>,
+
+          <DataRow key="Fee" title="Fee">
+            0%
           </DataRow>,
 
           <Typography
@@ -103,7 +108,7 @@ const ConfirmationHeader = ({ txInfo }: { txInfo: VaultDepositTransactionInfo })
       >
         <Box flex={1}>
           <Typography variant="body2" color="primary.light">
-            Earn
+            Earn (after fees)
           </Typography>
 
           <Typography variant="h4" fontWeight="bold" component="div">
@@ -134,12 +139,12 @@ const VaultDepositConfirmation = ({
           <>{!isTxDetails && <ConfirmationHeader txInfo={txInfo} />}</>,
 
           <DataRow key="Deposit via" title="Deposit via">
-            <ExternalLink href={txInfo.vaultInfo.dashboardUri!}>
+            <Stack direction="row" alignItems="center">
               <IframeIcon src={txInfo.vaultInfo.logoUri} alt="Morpho logo" width={24} height={24} />
               <Typography component="span" ml={1} fontWeight="bold">
                 {txInfo.vaultInfo.name}
               </Typography>
-            </ExternalLink>
+            </Stack>
           </DataRow>,
 
           <DataRow key="Expected annual reward" title="Exp. annual reward">
@@ -159,12 +164,12 @@ const VaultDepositConfirmation = ({
           </DataRow>,
 
           <DataRow
-            key="Widget fee"
+            key="Performance fee"
             title={
               <>
-                Widget fee
+                Performance fee
                 <InfoTooltip
-                  title={`The widget fee incurred here is charged by Kiln for the operation of this widget. The fee is calculated automatically. Part of the fee will contribute to a license fee that supports the Safe Community. Neither the Safe Ecosystem Foundation nor ${BRAND_NAME} operates the Kiln Widget and/or Kiln.`}
+                  title={`The performance fee incurred here is charged by Kiln for the operation of this widget. The fee is calculated automatically. Part of the fee will contribute to a license fee that supports the Safe Community. Neither the Safe Ecosystem Foundation nor ${BRAND_NAME} operates the Kiln Widget and/or Kiln.`}
                 />
               </>
             }

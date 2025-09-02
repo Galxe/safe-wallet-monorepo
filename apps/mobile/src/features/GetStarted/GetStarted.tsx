@@ -6,7 +6,8 @@ import { SafeFontIcon } from '@/src/components/SafeFontIcon'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { BlurView } from 'expo-blur'
 import { getCrashlytics } from '@react-native-firebase/crashlytics'
-import { getAnalytics } from '@react-native-firebase/analytics'
+import { setAnalyticsCollectionEnabled } from '@/src/services/analytics'
+import { isAndroid } from '@/src/config/constants'
 
 const StyledText = styled(Text, {
   fontSize: '$3',
@@ -19,13 +20,18 @@ export const GetStarted = () => {
 
   const enableCrashlytics = async () => {
     await getCrashlytics().setCrashlyticsCollectionEnabled(true)
-    await getAnalytics().setAnalyticsCollectionEnabled(true)
+    await setAnalyticsCollectionEnabled(true)
   }
 
   const onPressAddAccount = useCallback(async () => {
     await enableCrashlytics()
     router.navigate('/(import-accounts)')
   }, [])
+
+  const onPressImportAccount = useCallback(async () => {
+    await enableCrashlytics()
+    router.navigate('/import-data')
+  }, [router])
 
   return (
     <YStack justifyContent={'flex-end'} flex={1} testID={'get-started-screen'}>
@@ -65,6 +71,11 @@ export const GetStarted = () => {
         >
           Add account
         </SafeButton>
+        {!isAndroid && (
+          <SafeButton outlined icon={<SafeFontIcon name={'upload'} />} onPress={onPressImportAccount}>
+            Migrate old app
+          </SafeButton>
+        )}
         <View
           paddingHorizontal={'$10'}
           marginTop={'$2'}

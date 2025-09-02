@@ -1,12 +1,12 @@
 import React from 'react'
 import { Text, View } from 'tamagui'
 import { SafeListItem } from '@/src/components/SafeListItem'
-import { Logo } from '@/src/components/Logo'
+import { TokenIcon } from '@/src/components/TokenIcon'
 import { ellipsis } from '@/src/utils/formatters'
 
 interface AssetsCardProps {
   name: string
-  description: string
+  description?: string
   logoUri?: string | null
   rightNode?: string | React.ReactNode
   accessibilityLabel?: string
@@ -30,16 +30,25 @@ export function AssetsCard({
       onPress={onPress}
       label={
         <View>
-          <Text fontSize="$4" fontWeight={600}>
+          <Text fontSize="$4" fontWeight={600} lineHeight={20}>
             {name}
           </Text>
-          <Text fontSize="$4" color="$colorSecondary" fontWeight={400}>
-            {description}
-          </Text>
+          {description && (
+            <Text fontSize="$4" color="$colorSecondary" fontWeight={400} lineHeight={20}>
+              {description}
+            </Text>
+          )}
         </View>
       }
       transparent={transparent}
-      leftNode={<Logo imageBackground={imageBackground} logoUri={logoUri} accessibilityLabel={accessibilityLabel} />}
+      leftNode={
+        <TokenIcon
+          imageBackground={imageBackground}
+          logoUri={logoUri}
+          accessibilityLabel={accessibilityLabel}
+          size={'$8'}
+        />
+      }
       rightNode={
         typeof rightNode === 'string' ? (
           <Text fontSize="$4" fontWeight={400} color="$color">
@@ -49,6 +58,7 @@ export function AssetsCard({
           rightNode
         )
       }
+      paddingVertical={'$2'}
     />
   )
 }

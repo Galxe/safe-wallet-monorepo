@@ -19,6 +19,8 @@ export default function SignSuccess() {
   const handleDonePress = () => {
     dispatch(cgwApi.util.invalidateTags(['transactions']))
 
+    // Go back twice to the confirm transaction screen
+    router.back()
     router.back()
   }
 
@@ -30,7 +32,6 @@ export default function SignSuccess() {
           <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
             <View flex={1} flexGrow={1} alignItems="center" justifyContent="center" paddingHorizontal="$3">
               <Badge
-                circleProps={{ backgroundColor: '#1B2A22' }}
                 themeName="badge_success"
                 circleSize={64}
                 content={<SafeFontIcon size={32} color="$primary" name="check-filled" />}

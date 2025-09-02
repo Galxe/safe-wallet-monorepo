@@ -22,11 +22,15 @@ const SidebarFooter = (): ReactElement => {
   // }
 
   return (
-    <SidebarList>
+    <>
       {!IS_PRODUCTION && (
-        <ListItem disablePadding>
-          <DebugToggle />
-        </ListItem>
+        <>
+          <ListItem disablePadding>
+            <DebugToggle />
+          </ListItem>
+
+          <Divider flexItem />
+        </>
       )}
 
       {/* <Track {...OVERVIEW_EVENTS.WHATS_NEW}>

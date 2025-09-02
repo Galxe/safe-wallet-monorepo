@@ -7,11 +7,8 @@ import { useMemo } from 'react'
 import { skipToken } from '@reduxjs/toolkit/query'
 import { NestedTransaction } from '../NestedTransaction'
 import TxData from '../..'
-import { isMultiSendTxInfo, isOrderTxInfo } from '@/utils/transaction-guards'
-import { ErrorBoundary } from '@sentry/react'
-import Multisend from '../../DecodedData/Multisend'
 import { TxSimulation, TxSimulationMessage } from '@/components/tx/security/tenderly'
-import type { SafeTransaction } from '@safe-global/safe-core-sdk-types'
+import type { SafeTransaction } from '@safe-global/types-kit'
 import extractTxInfo from '@/services/tx/extractTxInfo'
 import { useSignedHash } from '../useSignedHash'
 import useSafeAddress from '@/hooks/useSafeAddress'
@@ -61,12 +58,6 @@ export const OnChainConfirmation = ({
             trusted
             imitation={false}
           />
-
-          {(isMultiSendTxInfo(nestedTxDetails.txInfo) || isOrderTxInfo(nestedTxDetails.txInfo)) && (
-            <ErrorBoundary fallback={<div>Error parsing data</div>}>
-              <Multisend txData={nestedTxDetails.txData} isExecuted={!!nestedTxDetails.executedAt} />
-            </ErrorBoundary>
-          )}
 
           {isConfirmationView && (
             <Stack spacing={2}>

@@ -1,6 +1,6 @@
 import React, { useContext, useMemo, type ReactElement } from 'react'
 import { useRouter } from 'next/router'
-import { ListItemButton } from '@mui/material'
+import { Divider, ListItemButton } from '@mui/material'
 import { ImplementationVersionState } from '@safe-global/safe-gateway-typescript-sdk'
 
 import {
@@ -31,7 +31,13 @@ const getSubdirectory = (pathname: string): string => {
 
 const geoBlockedRoutes = [AppRoutes.bridge, AppRoutes.swap, AppRoutes.stake, AppRoutes.earn]
 
-const undeployedSafeBlockedRoutes = [AppRoutes.bridge, AppRoutes.swap, AppRoutes.stake, AppRoutes.apps.index]
+const undeployedSafeBlockedRoutes = [
+  AppRoutes.bridge,
+  AppRoutes.swap,
+  AppRoutes.stake,
+  AppRoutes.apps.index,
+  AppRoutes.earn,
+]
 
 const customSidebarEvents: { [key: string]: { event: any; label: string } } = {
   [AppRoutes.bridge]: { event: BRIDGE_EVENTS.OPEN_BRIDGE, label: BRIDGE_LABELS.sidebar },
@@ -104,6 +110,8 @@ const Navigation = (): ReactElement => {
           ItemTag = queueSize ? <SidebarListItemCounter count={queueSize} /> : null
         }
 
+        const isSettingsItem = item.href === AppRoutes.settings.setup
+
         return (
           <Tooltip
             title={isDisabled ? 'You need to activate your Safe first.' : ''}
@@ -139,6 +147,8 @@ const Navigation = (): ReactElement => {
                   </SidebarListItemText>
                 </SidebarListItemButton>
               </ListItemButton>
+
+              {isSettingsItem && <Divider sx={{ mt: 1, mb: 0.5 }} />}
             </div>
           </Tooltip>
         )
