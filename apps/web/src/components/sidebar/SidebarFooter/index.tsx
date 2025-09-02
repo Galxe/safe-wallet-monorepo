@@ -7,7 +7,7 @@ import {
   SidebarListItemText,
 } from '@/components/sidebar/SidebarList'
 import HelpCenterIcon from '@/public/images/sidebar/help-center.svg'
-import { Link, ListItem, SvgIcon, Typography } from '@mui/material'
+import { Divider, Link, ListItem, SvgIcon, Typography } from '@mui/material'
 import DebugToggle from '../DebugToggle'
 import { IS_PRODUCTION } from '@/config/constants'
 import { HELP_CENTER_PROTOFIRE_URL } from '@safe-global/utils/config/constants'
@@ -22,7 +22,7 @@ const SidebarFooter = (): ReactElement => {
   // }
 
   return (
-    <>
+    <SidebarList>
       {!IS_PRODUCTION && (
         <>
           <ListItem disablePadding>

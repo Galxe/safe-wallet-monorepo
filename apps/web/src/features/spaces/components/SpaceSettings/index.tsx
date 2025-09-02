@@ -10,8 +10,8 @@ import DeleteSpaceDialog from '@/features/spaces/components/SpaceSettings/Delete
 import UpdateSpaceForm from '@/features/spaces/components/SpaceSettings/UpdateSpaceForm'
 import { trackEvent } from '@/services/analytics'
 import { SPACE_EVENTS, SPACE_LABELS } from '@/services/analytics/events/spaces'
-import ExternalLink from '@/components/common/ExternalLink'
-import { AppRoutes } from '@/config/routes'
+// import ExternalLink from '@/components/common/ExternalLink'
+// import { AppRoutes } from '@/config/routes'
 import LeaveSpaceDialog from './LeaveSpaceDialog'
 import { useIsLastActiveAdmin } from '../../hooks/useIsLastActiveAdmin'
 
