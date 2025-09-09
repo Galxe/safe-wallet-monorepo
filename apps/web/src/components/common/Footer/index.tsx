@@ -50,9 +50,9 @@ const Footer = (): ReactElement | null => {
       <ul>
         {true ? (
           <>
-            {/* <li>
-              <Typography variant="caption">&copy;2022–{new Date().getFullYear()} Core Contributors GmbH</Typography>
-            </li> */}
+            <li>
+              <Typography variant="caption">2025 Gravity Safe</Typography>
+            </li>
             <li>
               <ExternalLink href={DISCORD_URL} noIcon sx={{ svg: { mr: 0.5 } }}>
                 <SvgIcon component={DiscordIcon} inheritViewBox fontSize="inherit" />

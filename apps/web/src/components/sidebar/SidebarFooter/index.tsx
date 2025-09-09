@@ -12,6 +12,9 @@ import DebugToggle from '../DebugToggle'
 import { IS_PRODUCTION } from '@/config/constants'
 import { HELP_CENTER_PROTOFIRE_URL } from '@safe-global/utils/config/constants'
 import darkPalette from '@/components/theme/darkPalette'
+import { BEAMER_SELECTOR } from '@/services/beamer'
+import { NEW_SUGGESTION_FORM } from '@/config/constants'
+import SuggestionIcon from '@/public/images/sidebar/lightbulb_icon.svg'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
 
 const SidebarFooter = (): ReactElement => {
@@ -58,7 +61,16 @@ const SidebarFooter = (): ReactElement => {
           </SidebarListItemButton>
         </a>
       </ListItem>
-
+      <ListItem disablePadding>
+        <a target="_blank" rel="noopener noreferrer" href={NEW_SUGGESTION_FORM} style={{ width: '100%' }}>
+          <SidebarListItemButton id={BEAMER_SELECTOR} style={{ backgroundColor: '#12FF80', color: 'black' }}>
+            <SidebarListItemIcon color="primary">
+              <SuggestionIcon />
+            </SidebarListItemIcon>
+            <SidebarListItemText bold>New Features Suggestion?</SidebarListItemText>
+          </SidebarListItemButton>
+        </a>
+      </ListItem>
       <ListItem>
         <SidebarListItemText>
           <Typography variant="caption">
