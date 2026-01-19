@@ -5,8 +5,13 @@ import useAsync from '@safe-global/utils/hooks/useAsync'
 import useChainId from '@/hooks/useChainId'
 import useIntervalCounter from '@/hooks/useIntervalCounter'
 import { OpenInNewRounded } from '@mui/icons-material'
+import { IS_PRODUCTION } from '@/config/constants'
+import { GATEWAY_URL } from '@/config/gateway'
 
-const STATUS_PAGE = 'https://status.safe.global'
+const STATUS_PAGE = IS_PRODUCTION
+  ? `https://tx-status-app.safe.protofire.io/?serviceUrl=${GATEWAY_URL}`
+  : `https://status-app.stage.safe.protofire.io/?serviceUrl=${GATEWAY_URL}`
+
 const MAX_SYNC_DELAY = 1000 * 60 * 5 // 5 minutes
 const POLL_INTERVAL = 1000 * 60 // 1 minute
 
