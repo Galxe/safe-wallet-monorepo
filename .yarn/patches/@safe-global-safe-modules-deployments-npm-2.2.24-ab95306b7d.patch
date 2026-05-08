@@ -1,0 +1,37 @@
+diff --git a/dist/assets/allowance-module/v0.1.0/allowance-module.json b/dist/assets/allowance-module/v0.1.0/allowance-module.json
+index 8fd727711be01a246b52ec063017f76e6eda7dc8..abcd4d68271ea64dcdd37fd085ff7235e07d77d1 100644
+--- a/dist/assets/allowance-module/v0.1.0/allowance-module.json
++++ b/dist/assets/allowance-module/v0.1.0/allowance-module.json
+@@ -11,7 +11,9 @@
+         "100": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
+         "137": "0x1Fb403834C911eB98d56E74F5182b0d64C3b3b4D",
+         "246": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
++        "1625": "0xE46FE78DBfCa5E835667Ba9dCd3F3315E7623F8a",
+         "8453": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
++        "13505": "0xE46FE78DBfCa5E835667Ba9dCd3F3315E7623F8a",
+         "42220": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
+         "43114": "0x1Fb403834C911eB98d56E74F5182b0d64C3b3b4D",
+         "73799": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
+diff --git a/dist/assets/allowance-module/v0.1.1/allowance-module.json b/dist/assets/allowance-module/v0.1.1/allowance-module.json
+index 9fd48996a2d44ef4877f667cc54f19b116cb384e..fce50faec3c565f34f551dfba0cdeab1a60b5823 100644
+--- a/dist/assets/allowance-module/v0.1.1/allowance-module.json
++++ b/dist/assets/allowance-module/v0.1.1/allowance-module.json
+@@ -14,15 +14,17 @@
+         "360": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "988": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "999": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
++        "1625": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "2201": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "2818": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "2910": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "3338": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+-        "4326": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "3637": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
++        "4326": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "9745": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "10143": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "11011": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
++        "13505": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "16661": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "28882": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
+         "42431": "0xAA46724893dedD72658219405185Fb0Fc91e091C",
