@@ -1,0 +1,12 @@
+diff --git a/dist/src/utils/eip-3770/config.js b/dist/src/utils/eip-3770/config.js
+index 5a4c24f50b4852eeff2e606f9b9f6fc77f99d89c..b3c8c64b881cf3e69098a5ece1712d5ef1f25760 100644
+--- a/dist/src/utils/eip-3770/config.js
++++ b/dist/src/utils/eip-3770/config.js
+@@ -424,6 +424,7 @@ exports.networks = [
+     { chainId: 103454n, shortName: 'masatest' },
+     { chainId: 105105n, shortName: 'stratis' },
+     { chainId: 111188n, shortName: 're-al' },
++    { chainId: 127001n, shortName: 'grav' },
+     { chainId: 127823n, shortName: 'etls' },
+     { chainId: 128123n, shortName: 'etlt' },
+     { chainId: 167000n, shortName: 'tko-mainnet' },
